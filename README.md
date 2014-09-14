@@ -18,4 +18,4 @@
 
 > 1. Simulate begging pets
 
-2. Have fun!
+> 2. Have fun!
