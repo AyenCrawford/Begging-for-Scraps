@@ -1,7 +1,4 @@
 #Begging for Scraps
-
-----
-
 ## by Adrienne Camus
 
 
