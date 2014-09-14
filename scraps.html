@@ -1,101 +1,56 @@
 <!DOCTYPE html>
-
 <html>
-
 <script>
 
-
   function Animal(name, cuteness, perseverance, trickProbability) {
-
     this.name = name;
-
     this.cuteness = cuteness;
-
     this.perseverance = perseverance;
-
     this.trickProbability = trickProbability;
-
     this.browniePoints = 0;
-
     this.didTrick = function() {
-
       return (this.trickProbability >= Math.floor(Math.random() * 11)) 
-
     }
-
     this.beg = function() {
-
       this.browniePoints += (this.cuteness + this.perseverance) * (Math.floor(Math.random()));
-
     }
-
     this.progressReport = function() {
-
       var result = this.name + " has " + this.browniePoints + " brownie points"
-
         if (this.didTrick()) {
-
           result += ", and earned 10 more points with a trick, for a total of " + (this.browniePoints += 10) + " points. "
-
         } else {
-
           result += ". "
-
       }
-
       return result;
-
     }
-
   }
 
-
   var kayenne = new Animal("Kayenne", 10, 6, 6);
-
   var monty = new Animal("Monty", 7, 10, 8);
-
   var cherri = new Animal("Cherri", 3, 1, 0);
-
   var scraps = 100;
-
   var userFood = prompt("The animals are gathered around you, eyeing your food. What're you eating?")
-
 
   alert("The animals are competing for the " + userFood + " that you're eating. Which ones are cute enough to earn a treat?")
 
-
   while (kayenne.browniePoints < scraps && monty.browniePoints < scraps && cherri.browniePoints < scraps) {
-
     kayenne.beg();
-
     monty.beg();
-
     cherri.beg();
-
     alert(kayenne.progressReport() + "\n" + "\n" + monty.progressReport() + "\n" + "\n" + cherri.progressReport()); 
-
   }
 
-
   if (kayenne.browniePoints >= 100) {
-
     alert("Kayenne has earned herself some " + userFood + "! :D");
-
   }
 
   if (monty.browniePoints >= 100) {
-
     alert("Monty violently grabs the " + userFood + " out of your hand.");
-
   }
 
   if (cherri.browniePoints >= 100) {
-
     alert("Cherri sniffs the" + userFood + ", then realizes she doesn't want any anyway.");
-
   }
 
-
 </script>
-
 <html>
